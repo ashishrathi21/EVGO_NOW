@@ -1,5 +1,6 @@
 import React from 'react';
 import { Gift, Star, Rocket } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Pricing = () => {
   const packages = [
@@ -44,9 +45,7 @@ const Pricing = () => {
         <span className="bg-emerald-100 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full inline-block mb-4">
           PRICING PLAN
         </span>
-        <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2">
-          Upgrade your plan anytime
-        </h2>
+        <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2">Upgrade your plan anytime</h2>
         <p className="text-gray-600 max-w-xl mx-auto">
           Enjoy more visibility, better trust, and faster connections with serious buyers!
         </p>
@@ -54,11 +53,16 @@ const Pricing = () => {
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
         {packages.map((pkg, index) => (
-          <div
+          <motion.div
             key={index}
-            className={`relative border rounded-2xl p-8 flex flex-col items-center bg-white shadow-md hover:shadow-xl transition-shadow duration-300 ${
+            className={`relative border rounded-2xl p-8 flex flex-col items-center bg-white shadow-md will-change-[opacity,transform] ${
               pkg.popular ? 'border-emerald-500 scale-105' : 'border-emerald-200'
             }`}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            whileHover={{ scale: 1.03 }}
           >
             {pkg.popular && (
               <div className="absolute -top-4 bg-emerald-500 text-white text-xs font-medium px-3 py-1 rounded-full shadow-md">
@@ -67,7 +71,7 @@ const Pricing = () => {
             )}
 
             {/* Icon */}
-            <div className="bg-emerald-100 p-3 rounded-full mb-4">
+            <div className="bg-emerald-100 p-3 rounded-full mb-4 will-change-[opacity,transform]">
               <pkg.icon className="h-8 w-8 text-emerald-600" />
             </div>
 
@@ -78,18 +82,25 @@ const Pricing = () => {
             {/* Features */}
             <ul className="space-y-2 text-left w-full mb-6 text-gray-700 text-sm">
               {pkg.features.map((feature, featureIndex) => (
-                <li key={featureIndex} className="flex items-center space-x-2">
+                <motion.li
+                  key={featureIndex}
+                  className="flex items-center space-x-2 will-change-[opacity,transform]"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: featureIndex * 0.1 }}
+                >
                   <span className="bg-emerald-100 text-emerald-600 w-5 h-5 flex items-center justify-center rounded-full text-xs font-bold">
                     ✓
                   </span>
                   <span>{feature}</span>
-                </li>
+                </motion.li>
               ))}
             </ul>
 
             {/* Action Button */}
             <button
-              className={`w-full py-2 rounded-lg font-medium transition-colors ${
+              className={`w-full py-2 rounded-lg font-medium transition-colors will-change-[transform] ${
                 pkg.popular
                   ? 'bg-emerald-600 text-white hover:bg-emerald-700'
                   : 'bg-emerald-100 text-emerald-700 hover:bg-emerald-200'
@@ -97,7 +108,7 @@ const Pricing = () => {
             >
               Choose {pkg.name}
             </button>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

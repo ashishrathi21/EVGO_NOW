@@ -1,26 +1,30 @@
-import React from 'react';
 import { Search, Scale, MessageSquare, CheckCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const HowItWorks = () => {
   const steps = [
     {
       title: 'Browse & Explore',
-      description: 'Discover verified pre-owned EVs with detailed listings — including battery health, range, and trust scores.',
+      description:
+        'Discover verified pre-owned EVs with detailed listings — including battery health, range, and trust scores.',
       icon: Search,
     },
     {
       title: 'Compare & Decide',
-      description: 'Use our smart tools to check if an EV fits your usage, budget, and goals — so you can buy with confidence.',
+      description:
+        'Use our smart tools to check if an EV fits your usage, budget, and goals — so you can buy with confidence.',
       icon: Scale,
     },
     {
       title: 'Connect with Sellers',
-      description: 'Reach out directly to verified sellers and get all your questions answered — quickly and securely.',
+      description:
+        'Reach out directly to verified sellers and get all your questions answered — quickly and securely.',
       icon: MessageSquare,
     },
     {
       title: 'Complete the Deal',
-      description: 'Finalize your purchase with full transparency. Plus, get ongoing support — battery tips & nearby charging info.',
+      description:
+        'Finalize your purchase with full transparency. Plus, get ongoing support — battery tips & nearby charging info.',
       icon: CheckCircle,
     },
   ];
@@ -40,16 +44,21 @@ const HowItWorks = () => {
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center"
+              className="bg-white rounded-xl p-6 shadow-md flex flex-col items-center text-center will-change-[opacity,transform]"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2, duration: 0.6 }}
+              whileHover={{ scale: 1.05 }}
             >
               <div className="bg-emerald-100 p-4 rounded-full mb-4">
                 <step.icon className="h-8 w-8 text-emerald-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
               <p className="text-gray-600 text-sm">{step.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
