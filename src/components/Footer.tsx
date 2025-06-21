@@ -1,5 +1,6 @@
-import React from 'react';
+
 import { Zap, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import Logo from "../logo-l.png";
 
 const Footer = () => {
   return (
@@ -10,12 +11,12 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="bg-emerald-500 p-2 rounded-lg">
-                <Zap className="h-6 w-6 text-white" />
+                <img src={Logo} alt="" className='size-5'/>
               </div>
-              <span className="text-xl font-bold">EcoCharge</span>
+              <span className="text-xl font-bold">EVGO</span>
             </div>
             <p className="text-emerald-200 text-sm leading-relaxed">
-              Revolutionary EV charging solutions for a sustainable future. Find, connect, and charge with ease.
+              Your trusted marketplace for pre-owned EVs — buy, sell, and drive towards a greener tomorrow.
             </p>
           </div>
 
@@ -51,10 +52,10 @@ const Footer = () => {
               <a href="#" className="bg-emerald-700 hover:bg-emerald-600 p-2 rounded-lg transition-colors duration-200">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-emerald-700 hover:bg-emerald-600 p-2 rounded-lg transition-colors duration-200">
+              <a href="https://www.instagram.com/evgo_official/" className="bg-emerald-700 hover:bg-emerald-600 p-2 rounded-lg transition-colors duration-200">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-emerald-700 hover:bg-emerald-600 p-2 rounded-lg transition-colors duration-200">
+              <a href="https://www.linkedin.com/company/evgo-official/about/?viewAsMember=true" className="bg-emerald-700 hover:bg-emerald-600 p-2 rounded-lg transition-colors duration-200">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -64,10 +65,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-emerald-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-emerald-200 text-sm">
-            © 2025 EcoCharge. All rights reserved.
+            © 2025 EVGO. All rights reserved.
           </p>
           <p className="text-emerald-200 text-sm mt-4 md:mt-0">
-            Empowering sustainable transportation worldwide
+            Empowering smart EV choices for a cleaner, greener tomorrow.
           </p>
         </div>
       </div>

@@ -1,29 +1,30 @@
-import React from 'react';
-import { Car, Clock, Navigation, MapPin } from 'lucide-react';
+import { BatteryFull, ShieldCheck, Handshake, Headphones } from 'lucide-react';
+import Feature from "../features.webp"
+
 
 const Features = () => {
   const features = [
-    {
-      icon: Car,
-      title: 'Charging Vehicle',
-      description: 'Stations designed to serve both EVs and plug-in hybrid vehicles offering traditional fuel vehicles.'
-    },
-    {
-      icon: Clock,
-      title: '24 Hours Support',
-      description: '24-hour support for electric vehicle (EV) charging, many EV charging networks and providers offer customer service.'
-    },
-    {
-      icon: Navigation,
-      title: 'Traffic Information',
-      description: 'Real-time Google Maps and Apple Maps now support showing EV charging stations with real-time data.'
-    },
-    {
-      icon: MapPin,
-      title: 'GPS Tracker',
-      description: 'EV charging GPS tracker is a tool or system that integrates navigation, real-time data on charging station locations.'
-    }
-  ];
+  {
+    icon: BatteryFull,
+    title: 'Verified Battery Health Reports',
+    description: 'Get a clear, honest report of the EV’s battery health — so you know exactly what you’re buying.'
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Certified Inspection Support',
+    description: 'Connect with certified EV technicians for detailed inspection and reports.'
+  },
+  {
+    icon: Handshake,
+    title: 'Seller Trust Score & Listings',
+    description: 'Every EV is listed with a verified trust score — making buying and selling safe, smooth, and transparent.'
+  },
+  {
+    icon: Headphones,
+    title: 'Post-Sale Support & Guidance',
+    description: 'Access battery health tracking, nearby charging stations, and expert guidance even after your purchase.'
+  }
+];
 
   return (
     <section className="py-20 bg-white">
@@ -33,9 +34,9 @@ const Features = () => {
           <div className="relative">
             <div className="bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl p-8">
               <img 
-                src="https://images.pexels.com/photos/7893745/pexels-photo-7893745.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                src={Feature}
                 alt="Electric vehicle charging"
-                className="w-full h-64 object-cover rounded-xl"
+                className="w-full h-auto object-cover rounded-xl"
               />
             </div>
           </div>
@@ -46,8 +47,8 @@ const Features = () => {
               <span className="bg-emerald-100 text-emerald-800 text-sm font-semibold px-4 py-2 rounded-full">
                 OUR FEATURE
               </span>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mt-4">
-                Revolutionizing Your Charging Experience
+              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mt-4">
+                We make second-hand EV buying simple, transparent, and trustworthy !
               </h2>
             </div>
 

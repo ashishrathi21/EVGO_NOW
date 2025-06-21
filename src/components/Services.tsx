@@ -1,0 +1,81 @@
+
+import { BatteryFull, ListChecks, MapPin, Headphones } from 'lucide-react';
+import Service from "../services.png"
+
+const Services = () => {
+  const services = [
+  {
+    icon: BatteryFull,
+    title: 'Battery Health Check & Report',
+    description: 'Get a quick and accurate battery health report for any EV — so buyers can trust what they’re getting.',
+  },
+  {
+    icon: ListChecks,
+    title: 'Seamless EV Listing Support',
+    description: 'We help sellers list their EVs easily with all the key details, photos, and trust badges — for faster, transparent sales.',
+  },
+  {
+    icon: MapPin,
+    title: 'Post-Sale Guidance & Support',
+    description: 'Stay supported even after the sale — with battery tracking, nearby charging station maps, and expert EV tips.',
+  },
+  {
+    icon: Headphones,
+    title: 'Dedicated User Assistance',
+    description: 'Have questions or need help? Our team is here to guide you at every step — ensuring a smooth buying and selling experience.',
+  },
+];
+
+
+  return (
+    <section className="py-20 bg-gradient-to-r from-emerald-50 to-emerald-100 rounded-3xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <div className="space-y-8">
+            <div>
+              <span className="bg-emerald-200 text-emerald-800 text-sm font-semibold px-4 py-2 rounded-full">
+                OUR SERVICE
+              </span>
+              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mt-4">
+                Offering real support and verified info at every stage of your EV buying and selling journey!
+              </h2>
+            </div>
+
+            <div className="space-y-6">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-emerald-100 p-3 rounded-lg">
+                      <service.icon className="h-6 w-6 text-emerald-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900">{service.title}</h3>
+                      <p className="text-gray-600 text-sm mt-1">{service.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Image */}
+          <div className="relative">
+            <div className="bg-gradient-to-br from-yellow-200 to-green-300 rounded-2xl p-8">
+              <img
+                src={Service}
+                alt="EV support services"
+                className="w-full h-auto object-cover rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;

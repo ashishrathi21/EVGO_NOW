@@ -1,9 +1,9 @@
 
 import Hero from './components/Hero';
 import Features from './components/Features';
-import ChargingOptions from './components/ChargingOptions';
+import Services from './components/Services';
 import Pricing from './components/Pricing';
-import Blog from './components/Blog';
+import Blog from './components/HowItWorks';
 import Footer from './components/Footer';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       
       <Hero />
       <Features />
-      <ChargingOptions />
+      <Services />
       <Pricing />
       <Blog />
       <Footer />
