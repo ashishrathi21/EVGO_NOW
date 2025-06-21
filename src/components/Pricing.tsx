@@ -39,7 +39,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-emerald-50 to-white">
+    <section id="pricing" className="py-20 bg-gradient-to-b from-emerald-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
         <span className="bg-emerald-100 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full inline-block mb-4">
           PRICING PLAN

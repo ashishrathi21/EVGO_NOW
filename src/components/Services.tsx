@@ -26,15 +26,15 @@ const Services = () => {
   },
 ];
 
-
+           
   return (
-    <section className="py-20 bg-gradient-to-r from-emerald-50 to-emerald-100 rounded-3xl">
+    <section id="services" className="py-20 bg-gradient-to-br from-green-300 via-green-200 to-yellow-100 " style={{ borderRadius: '2.5rem' }} >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-8">
             <div>
-              <span className="bg-emerald-200 text-emerald-800 text-sm font-semibold px-4 py-2 rounded-full">
+              <span className="bg-emerald-500 text-emerald-50 text-sm font-semibold px-4 py-2 rounded-full">
                 OUR SERVICE
               </span>
               <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mt-4">
@@ -64,7 +64,7 @@ const Services = () => {
 
           {/* Image */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-yellow-200 to-green-300 rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-emerald-300 to-emerald-200 rounded-2xl p-8">
               <img
                 src={Service}
                 alt="EV support services"
