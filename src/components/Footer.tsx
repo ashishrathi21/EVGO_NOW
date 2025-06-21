@@ -1,5 +1,5 @@
 
-import { Zap, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import Logo from "../logo-l.png";
 
 const Footer = () => {
